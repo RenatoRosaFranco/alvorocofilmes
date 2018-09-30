@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Alvoroco | <%= yield :title %></title>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="<%= controller.controller_name %>" data-spy='scroll'>
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
+    <%= render partial: 'layouts/footer' %>
+  </body>
+</html>

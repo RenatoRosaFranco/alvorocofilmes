@@ -1,0 +1,33 @@
+<%= form_for(contact) do |f| %>
+	
+	<%= has_errors?(contact) %>
+
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name, class: 'form-control', required: 'required',
+		placeholder: 'Digite o nome', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :phone %>
+		<%= f.phone_field :phone, class: 'form-control', required: 'required',
+		placeholder: 'Digite o telefone', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :email %>
+		<%= f.email_field :email, class: 'form-control', required: 'required',
+		placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :subject %>
+		<%= f.text_field :subject, class: 'form-control', required: 'required',
+		placeholder: 'Digite o assunto', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :message %>
+		<%= f.text_area :message, class: 'form-control', required: 'required',
+		placeholder: 'Escreva sua mensagem', autocomplete: 'off' %>
+	</div>
+	<div class="field"><br />
+		<%= f.submit 'Enviar Mensagem', class: 'btn btn0primary btn-lg top' %>
+	</div>
+<% end %>
